@@ -12,6 +12,10 @@ The application allows users to enter their information and instantly receive an
 
 ---
 
+## 🎥 Demo Video
+
+[▶ Watch the Demo](https://github.com/user-attachments/assets/d530111a-5abf-459f-84da-de525f14f066)
+
 ## 🚀 Features
 
 * Predict annual medical insurance cost
