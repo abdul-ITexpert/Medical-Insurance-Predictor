@@ -1,0 +1,332 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f8fbff;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+
+
+.navbar{
+
+    background:#0d6efd;
+
+}
+
+.navbar-brand{
+
+    font-size:24px;
+
+}
+
+.nav-link{
+
+    color:white !important;
+    margin-left:20px;
+
+}
+
+.nav-link:hover{
+
+    color:#dce9ff !important;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    padding:90px 0;
+
+    background:linear-gradient(135deg,#0d6efd,#59a6ff);
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+    font-weight:700;
+
+}
+
+.hero span{
+
+    color:#ffe082;
+
+}
+
+.hero p{
+
+    margin:30px 0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.hero-icon{
+
+    font-size:240px;
+
+    opacity:.9;
+
+}
+
+/* ===========================
+   PREDICTION CARD
+=========================== */
+
+.prediction-card{
+
+    border-radius:20px;
+
+}
+
+.prediction-card h2{
+
+    font-weight:700;
+
+    color:#0d6efd;
+
+}
+
+.form-control,
+.form-select{
+
+    height:55px;
+
+    border-radius:12px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 8px rgba(13,110,253,.25);
+
+}
+
+.btn-primary{
+
+    padding:14px;
+
+    font-size:18px;
+
+    border-radius:12px;
+
+}
+
+
+
+    
+    
+    
+    
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:35px 0;
+
+}
+
+footer p{
+
+    margin:0;
+
+}
+
+/* ======================================
+   RESULT CARD
+====================================== */
+
+.result-card{
+
+    border-radius:25px;
+
+    animation:fadeIn .7s;
+
+}
+
+.result-icon{
+
+    width:90px;
+
+    height:90px;
+
+    background:#198754;
+
+    color:white;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:40px;
+
+}
+
+.price{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#198754;
+
+    margin:20px 0;
+
+}
+
+.result-card hr{
+
+    margin:30px 0;
+
+}
+
+.badge{
+
+    border-radius:30px;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==================================
+   ABOUT SECTION
+================================== */
+
+.info-card{
+
+    border:none;
+
+    border-radius:18px;
+
+    transition:0.3s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.info-card h4{
+
+    font-weight:600;
+
+}
+
+.table td,
+.table th{
+
+    vertical-align:middle;
+
+}
+
+ol li{
+
+    margin-bottom:10px;
+
+}
+
+/* ==============================
+   DASHBOARD
+============================== */
+
+
+.card{
+
+    border-radius:20px;
+
+}
+
+.card-header{
+
+    border-radius:20px 20px 0 0 !important;
+
+}
+
+.card img{
+
+    transition:.3s;
+
+}
+
+.card img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.dashboard-title{
+
+    font-size:45px;
+
+    font-weight:700;
+
+}
+
+
+

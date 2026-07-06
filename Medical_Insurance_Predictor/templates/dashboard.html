@@ -1,0 +1,404 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | Medical Insurance Predictor
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">
+            <i class="bi bi-speedometer2"></i>
+            AI Model Dashboard
+        </h1>
+
+        <p class="text-muted">
+            Performance analysis of the Medical Insurance Cost Prediction System
+        </p>
+    </div>
+
+    <!-- Statistics Cards -->
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-database fs-1 text-primary"></i>
+
+                    <h2 class="mt-3">
+
+                        {{ metrics.dataset_size }}
+
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Dataset Records
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-list-columns fs-1 text-success"></i>
+
+                    <h2 class="mt-3">
+
+                        {{ metrics.features }}
+
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Input Features
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-cpu fs-1 text-warning"></i>
+
+                    <h5 class="mt-3">
+
+                        {{ metrics.algorithm }}
+
+                    </h5>
+
+                    <p class="text-muted">
+
+                        Best Performing Model
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-graph-up-arrow fs-1 text-danger"></i>
+
+                    <h5 class="mt-3">
+
+                        {{ metrics.problem }}
+
+                    </h5>
+
+                    <p class="text-muted">
+
+                        Machine Learning Task
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Model Comparison -->
+
+    <div class="card shadow border-0 mt-5">
+
+        <div class="card-header bg-primary text-white">
+
+            <h3 class="mb-0">
+
+                Model Comparison
+
+            </h3>
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Model</th>
+                        <th>Test R²</th>
+                        <th>Cross Validation R²</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for model in models %}
+
+                    <tr>
+
+                        <td>{{ model.name }}</td>
+
+                        <td>{{ model.test }}</td>
+
+                        <td>{{ model.cv }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Why CatBoost -->
+
+    <div class="card shadow border-0 mt-5">
+
+        <div class="card-body">
+
+            <h3 class="text-primary">
+
+                Why CatBoost?
+
+            </h3>
+
+            <hr>
+
+            <p>
+
+                CatBoost was selected because it achieved one of the highest
+                prediction accuracies while maintaining strong cross-validation
+                performance. It generalized well on unseen data and handled the
+                encoded categorical variables effectively.
+
+            </p>
+
+            <div class="row mt-4">
+
+                <div class="col-md-6">
+
+                    <div class="alert alert-success">
+
+                        <strong>Test R²:</strong>
+
+                        {{ metrics.test_r2 }}
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="alert alert-info">
+
+                        <strong>Cross Validation:</strong>
+
+                        {{ metrics.cv_r2 }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Prediction Workflow -->
+
+    <div class="card shadow border-0 mt-5">
+
+        <div class="card-body">
+
+            <h3 class="text-primary">
+
+                Prediction Workflow
+
+            </h3>
+
+            <hr>
+
+            <div class="row text-center">
+
+                <div class="col">
+
+                    👤
+                    <br>
+                    User Input
+
+                </div>
+
+                <div class="col">
+
+                    ➜
+
+                </div>
+
+                <div class="col">
+
+                    ⚙
+                    <br>
+                    Preprocessing
+
+                </div>
+
+                <div class="col">
+
+                    ➜
+
+                </div>
+
+                <div class="col">
+
+                    🤖
+                    <br>
+                    CatBoost
+
+                </div>
+
+                <div class="col">
+
+                    ➜
+
+                </div>
+
+                <div class="col">
+
+                    💰
+                    <br>
+                    Prediction
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="card shadow border-0 mt-5">
+
+    <div class="card-header bg-success text-white">
+
+        <h3 class="mb-0">
+
+            Feature Importance
+
+        </h3>
+
+    </div>
+
+    <div class="card-body text-center">
+
+        <img src="{{ url_for('static', filename='charts/feature_importance.png') }}"
+             class="img-fluid rounded shadow">
+
+    </div>
+
+</div>
+
+<div class="card shadow border-0 mt-5">
+
+    <div class="card-header bg-primary text-white">
+
+        <h3 class="mb-0">
+
+            Actual vs Predicted
+
+        </h3>
+
+    </div>
+
+    <div class="card-body text-center">
+
+        <img src="{{ url_for('static', filename='charts/actual_vs_predicted.png') }}"
+             class="img-fluid rounded shadow">
+
+    </div>
+
+</div>
+
+<div class="card shadow border-0 mt-5">
+
+    <div class="card-header bg-danger text-white">
+
+        <h3 class="mb-0">
+
+            Residual Error Analysis
+
+        </h3>
+
+    </div>
+
+    <div class="card-body text-center">
+
+        <img src="{{ url_for('static', filename='charts/residual.png') }}"
+             class="img-fluid rounded shadow">
+
+    </div>
+
+</div>
+
+<div class="card shadow border-0 mt-5 mb-5">
+
+    <div class="card-header bg-warning">
+
+        <h3 class="mb-0">
+
+            Model Comparison
+
+        </h3>
+
+    </div>
+
+    <div class="card-body text-center">
+
+        <img src="{{ url_for('static', filename='charts/model_comparison.png') }}" 
+        
+             class="img-fluid rounded shadow">
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

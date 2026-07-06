@@ -1,0 +1,356 @@
+{% extends "base.html" %}
+
+{% block title %}
+About | Medical Insurance Cost Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            About the Project
+        </h1>
+
+        <p class="text-muted">
+            Medical Insurance Cost Prediction using Machine Learning
+        </p>
+
+    </div>
+
+    <!-- Introduction -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Project Overview
+
+            </h3>
+
+            <hr>
+
+            <p>
+
+                Medical insurance companies estimate insurance charges based on
+                several factors such as age, gender, body mass index (BMI),
+                number of children, smoking status, and residential region.
+
+                This project applies machine learning techniques to predict
+                annual medical insurance costs accurately using patient
+                information.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Problem -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Problem Statement
+
+            </h3>
+
+            <hr>
+
+            <p>
+
+                Manual estimation of insurance costs can be inconsistent and
+                time-consuming. This system automates the prediction process
+                using machine learning to provide quick and reliable estimates.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Objectives -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Project Objectives
+
+            </h3>
+
+            <hr>
+
+            <ul>
+
+                <li>Predict annual medical insurance costs.</li>
+
+                <li>Compare multiple regression algorithms.</li>
+
+                <li>Select the best-performing machine learning model.</li>
+
+                <li>Provide predictions through a user-friendly web application.</li>
+
+                <li>Help users understand factors influencing insurance costs.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Dataset -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Dataset Information
+
+            </h3>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <ul>
+
+                        <li><strong>Total Records:</strong> 1338</li>
+
+                        <li><strong>Input Features:</strong> 8</li>
+
+                        <li><strong>Target Variable:</strong> Insurance Charges</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <ul>
+
+                        <li>Age</li>
+
+                        <li>Sex</li>
+
+                        <li>BMI</li>
+
+                        <li>Children</li>
+
+                        <li>Smoker</li>
+
+                        <li>Region</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Workflow -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Machine Learning Workflow
+
+            </h3>
+
+            <hr>
+
+            <div class="text-center">
+
+                <h5>
+
+                    Dataset
+
+                    ↓
+
+                    Data Preprocessing
+
+                    ↓
+
+                    Feature Engineering
+
+                    ↓
+
+                    Model Training
+
+                    ↓
+
+                    Model Evaluation
+
+                    ↓
+
+                    CatBoost Model
+
+                    ↓
+
+                    Prediction
+
+                </h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Technologies -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Technologies Used
+
+            </h3>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <h5>Programming</h5>
+
+                    <ul>
+
+                        <li>Python</li>
+
+                        <li>HTML</li>
+
+                        <li>CSS</li>
+
+                        <li>JavaScript</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <h5>Frameworks</h5>
+
+                    <ul>
+
+                        <li>Flask</li>
+
+                        <li>Bootstrap 5</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <h5>Libraries</h5>
+
+                    <ul>
+
+                        <li>Pandas</li>
+
+                        <li>NumPy</li>
+
+                        <li>Scikit-learn</li>
+
+                        <li>CatBoost</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Why CatBoost -->
+
+    <div class="card shadow border-0 mb-4">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Why CatBoost?
+
+            </h3>
+
+            <hr>
+
+            <p>
+
+                Several regression models were evaluated, including Random Forest,
+                Gradient Boosting, XGBoost, and CatBoost. CatBoost achieved one of
+                the highest prediction accuracies while maintaining strong
+                cross-validation performance, making it the selected model for
+                deployment in this application.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Future Work -->
+
+    <div class="card shadow border-0">
+
+        <div class="card-body p-4">
+
+            <h3 class="text-primary">
+
+                Future Enhancements
+
+            </h3>
+
+            <hr>
+
+            <ul>
+
+                <li>Integration with real hospital datasets.</li>
+
+                <li>User authentication.</li>
+
+                <li>Prediction history.</li>
+
+                <li>Cloud deployment.</li>
+
+                <li>Interactive dashboards.</li>
+
+                <li>Support for multiple insurance providers.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
