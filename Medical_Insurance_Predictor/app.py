@@ -7,7 +7,7 @@ import joblib
 app = Flask(__name__)
 
 # Load trained model
-model = joblib.load(r"C:\Users\ah266\OneDrive\Documents\Medical_Insurance_Predictor\models\catboost_model.pkl")
+model = joblib.load("models/catboost_model.pkl")
 
 
 
