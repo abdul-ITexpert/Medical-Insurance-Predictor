@@ -20,7 +20,7 @@ The application allows users to enter their information and instantly receive an
 
 🔗 **Try the Application Here:**
 
-medical-insurance-predictor-production.up.railway.app
+https://medical-insurance-predictor-production.up.railway.app
 
 ## 🚀 Features
 
