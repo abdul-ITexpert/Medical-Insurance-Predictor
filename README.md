@@ -16,8 +16,11 @@ The application allows users to enter their information and instantly receive an
 
 [▶ Watch the Demo](https://github.com/user-attachments/assets/d530111a-5abf-459f-84da-de525f14f066)
 
-## Live Demo
-[Live Demo](medical-insurance-predictor-production.up.railway.app)
+## 🌐 Live Demo
+
+🔗 **Try the Application Here:**
+
+medical-insurance-predictor-production.up.railway.app
 
 ## 🚀 Features
 
